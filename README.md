@@ -26,5 +26,6 @@ From Day-1 start choosing the idea and decide the name, design the ERD, wirefram
 - AWS RDS
 - AWS EB
 
+
 #### ERD:
-![ERD](https://i.ibb.co/4RpQn47/Screen-Shot-2021-02-19-at-1-23-54-PM.png)
+![ERD](https://i.ibb.co/wr8KBn1/ERD-LAST.png)

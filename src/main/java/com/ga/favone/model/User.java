@@ -22,6 +22,8 @@ public class User {
 	@Column( nullable = false ,updatable = true ,length = 2000)
 	private String profileImage;
 	
+	private String userRole;
+	
 	private String password;
 	
 	private String confirmPassword;
@@ -107,6 +109,14 @@ public class User {
 
 	public void setUpdateAt(LocalDateTime updateAt) {
 		this.updateAt = updateAt;
+	}
+
+	public String getUserRole() {
+		return userRole;
+	}
+
+	public void setUserRole(String userRole) {
+		this.userRole = userRole;
 	}
 	
 	

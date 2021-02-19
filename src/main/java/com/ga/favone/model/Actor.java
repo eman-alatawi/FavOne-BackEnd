@@ -22,10 +22,10 @@ public class Actor {
 
 	private String gender;
 
-	@Column(nullable = false, updatable = true, length = 5000)
+	@Column(updatable = true, length = 5000)
 	private String biography;
 
-	@Column(nullable = false, updatable = true, length = 2000)
+	@Column(updatable = true, length = 2000)
 	private String picture;
 
 	private String socialAccount;

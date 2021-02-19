@@ -19,7 +19,7 @@ public class User {
 	
 	private String emailAddress;
 	
-	@Column( nullable = false ,updatable = true ,length = 2000)
+	@Column(updatable = true ,length = 2000)
 	private String profileImage;
 	
 	private String userRole;

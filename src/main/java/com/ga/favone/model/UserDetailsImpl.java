@@ -16,6 +16,7 @@ public class UserDetailsImpl implements UserDetails{
 	private int id;
 	private String username;
 	private String password;
+	private String profileImage;
 	private List<GrantedAuthority> authorities;
 	
 	// Constructor
@@ -24,6 +25,7 @@ public class UserDetailsImpl implements UserDetails{
 			this.id = user.getId();
 			this.username = user.getEmailAddress();
 			this.password = user.getPassword();
+			this.profileImage = user.getProfileImage();
 			this.authorities = Arrays.stream(user.getUserRole().split(","))
 									.map(SimpleGrantedAuthority::new)
 									.collect(Collectors.toList());
@@ -77,6 +79,14 @@ public class UserDetailsImpl implements UserDetails{
 
 	public void setId(int id) {
 		this.id = id;
+	}
+
+	public String getProfileImage() {
+		return profileImage;
+	}
+
+	public void setProfileImage(String profileImage) {
+		this.profileImage = profileImage;
 	}
 
 

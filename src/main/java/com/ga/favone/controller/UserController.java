@@ -26,17 +26,23 @@ public class UserController {
 	@Autowired
 	private UserDao dao;
 
-	@PostMapping("/user/join")
-	public HashMap<String, String> join(@RequestBody User user) {
+	@PostMapping("/user/registration")
+	public HashMap<String, String> registration(@RequestBody User user) {
+
 
 		HashMap<String, String> response = new HashMap<String, String>();
+
+		// Check to user is already registered or not
 
 		var it = dao.findAll();
 
 		for (User dbUser : it) {
-			if (dbUser.getEmailAddress().equals(user.getEmailAddress()))
-				response.put("message", "User already Exists");
-			return response;
+			if (dbUser.getEmailAddress().equals(user.getEmailAddress())) {
+
+
+				response.put("message", "User already exists");
+				return response;
+			}
 		}
 
 		// Password Encryption
@@ -45,6 +51,7 @@ public class UserController {
 		user.setPassword(newPassword);
 
 		dao.save(user);
+
 		response.put("message", "User registered successfully");
 		return response;
 	}

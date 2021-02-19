@@ -3,7 +3,7 @@ Your place of your favorite  Movie/Drama/Actor. The users can add their favorite
 
 ## Important Links
 
-- [FaveOne React Repo](www.link.com)
+- [FaveOne Front-End Repo](https://git.generalassemb.ly/eman-e-alatawi/FaveOne-FrontEnd)
 - [Deployed FaveOne API](www.link.com)
 - [Deployed FaveOne React App](www.link.com)
 

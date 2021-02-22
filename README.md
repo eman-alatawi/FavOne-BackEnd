@@ -9,7 +9,7 @@ Your place of your favorite  Movie/Drama/Actor. The users can add their favorite
 
 
 ## Planning Story
-From Day-1 start choosing the idea and decide the name, design the ERD, wireframes and create the apps, repos.
+From Day-1 start choosing the idea and decide the name, design the ERD, Wireframes and create the Apps, Repos. Continue by creating one Model/Controller in the back-end and check it with the Postman then go and design the related components in the front-end. For each 2 days there is a complete feature in the front-end with design and styles and the back-end functionality.
 
 ### Technologies Used
 
@@ -27,5 +27,21 @@ From Day-1 start choosing the idea and decide the name, design the ERD, wirefram
 - AWS EB
 
 
+### Catalog of Routes
+
+Verb         |	URI Pattern   |	Description
+------------ | -------------  | ------------- 
+GET | /actor/index | Retrieve all Actors
+GET | /actor/detail/:id | Retrieve the details of specific Actor
+POST | /actor/add | Add new Actor
+PUT | /actor/edit | Update Actor
+DELETE| /actor/delete/:id | Delete Actor
+GET | /md/index | Retrieve all Movies-Dramas
+GET | /md/detail/:id | Retrieve the details of specific Movie-Drama
+POST | /md/add | Add new Movie-Drama
+PUT | /md/edit | Update Movie-Drama
+DELETE | /md/delete/:id | Delete Movie-Drama
+
+
 #### ERD:
-![ERD](https://i.ibb.co/wr8KBn1/ERD-LAST.png)
+![ERD](https://i.ibb.co/FqFjKBp/ER-LASTCHANGE-22022021.png)

@@ -41,6 +41,11 @@ GET | /md/detail/:id | Retrieve the details of specific Movie-Drama
 POST | /md/add | Add new Movie-Drama
 PUT | /md/edit | Update Movie-Drama
 DELETE | /md/delete/:id | Delete Movie-Drama
+GET | /mdgender/index | Retrieve all Movie-Drama's Genders
+GET | /mdgender/detail/:id | Retrieve the details of specific Movie-Drama's Gender
+POST | /mdgender/add | Add new Movie-Drama's Gender
+PUT | /mdgender/edit | Update Movie-Drama's Gender
+DELETE | /mdgender/delete/:id | Delete Movie-Drama's Gender
 
 
 #### ERD:

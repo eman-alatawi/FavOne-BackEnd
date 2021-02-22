@@ -52,6 +52,13 @@ public class MovieDrama {
 				inverseJoinColumns = { @JoinColumn(name = "actor_id")})
 	private Set<Actor> actors;
 	
+	
+	@ManyToMany
+	@JoinTable(name = "movieDrama_genders",
+				joinColumns = { @JoinColumn(name = "movieDrama_id") },
+				inverseJoinColumns = { @JoinColumn(name ="gender_id")})
+	private Set<Gender> genders;
+	
 
 	public int getId() {
 		return id;
@@ -151,6 +158,14 @@ public class MovieDrama {
 
 	public void setActors(Set<Actor> actors) {
 		this.actors = actors;
+	}
+
+	public Set<Gender> getGenders() {
+		return genders;
+	}
+
+	public void setGenders(Set<Gender> genders) {
+		this.genders = genders;
 	}
 
 	

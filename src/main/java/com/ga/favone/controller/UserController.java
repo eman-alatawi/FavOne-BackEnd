@@ -14,7 +14,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-
 import com.ga.favone.config.JwtUtil;
 import com.ga.favone.dao.UserDao;
 import com.ga.favone.model.JwtResponse;
@@ -88,5 +87,31 @@ public class UserController {
 		String jwtToken = jwtUtil.generateToken(userDetails);
 		System.out.println(jwtToken);
 		return ResponseEntity.ok(new JwtResponse(jwtToken));
+	}
+	
+	@PostMapping("/user/changePassword")
+	public HashMap<String, String> changePassword(@RequestBody User user) {
+		
+		HashMap<String, String> response = new HashMap<String, String>();
+
+		User dbuser = dao.findById(user.getId());
+		BCryptPasswordEncoder bCrypt = new BCryptPasswordEncoder();
+		String oldPass = user.getOldPassword();
+
+		if (bCrypt.matches(oldPass, dbuser.getPassword())) {
+			String newPassword = bCrypt.encode(user.getPassword());
+			user.setPassword(newPassword);
+
+			dao.save(user);
+			response.put("message", "The password  has been changed successfully");
+		}
+
+		else {
+			response.put("message", "The Old password that you provide dosen't match the old password in our records");
+
+		}
+
+
+		return response;
 	}
 }

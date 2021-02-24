@@ -30,11 +30,11 @@ public class MovieDrama {
 	private String poster;
 
 	private String duration;
-	
+
 	private int numOfEpisods;
-	
+
 	private String contentRating;
-	
+
 	private double score;
 
 	@Column(name = "createdAt", nullable = false, updatable = false)
@@ -44,21 +44,19 @@ public class MovieDrama {
 	@Column(name = "updatedAt", nullable = false, updatable = true)
 	@UpdateTimestamp
 	private LocalDateTime updateAt;
-	
-	
+
 	@ManyToMany
-	@JoinTable(name = "actor_movieDramas",
-				joinColumns = { @JoinColumn(name = "movieDrama_id") },
-				inverseJoinColumns = { @JoinColumn(name = "actor_id")})
+	@JoinTable(name = "actor_movieDramas", joinColumns = { @JoinColumn(name = "movieDrama_id") }, inverseJoinColumns = {
+			@JoinColumn(name = "actor_id") })
 	private Set<Actor> actors;
-	
-	
+
 	@ManyToMany
-	@JoinTable(name = "movieDrama_genders",
-				joinColumns = { @JoinColumn(name = "movieDrama_id") },
-				inverseJoinColumns = { @JoinColumn(name ="gender_id")})
+	@JoinTable(name = "movieDrama_genders", joinColumns = {
+			@JoinColumn(name = "movieDrama_id") }, inverseJoinColumns = { @JoinColumn(name = "gender_id") })
 	private Set<Gender> genders;
-	
+
+	@OneToMany(mappedBy = "movieDrama", cascade = CascadeType.ALL)
+	private Set<Episode> episodes;
 
 	public int getId() {
 		return id;
@@ -168,8 +166,12 @@ public class MovieDrama {
 		this.genders = genders;
 	}
 
-	
-	
-	
+	public Set<Episode> getEpisodes() {
+		return episodes;
+	}
+
+	public void setEpisodes(Set<Episode> episodes) {
+		this.episodes = episodes;
+	}
 
 }

@@ -46,7 +46,12 @@ GET | /mdgender/detail/:id | Retrieve the details of specific Movie-Drama's Gend
 POST | /mdgender/add | Add new Movie-Drama's Gender
 PUT | /mdgender/edit | Update Movie-Drama's Gender
 DELETE | /mdgender/delete/:id | Delete Movie-Drama's Gender
+GET | /episode/index | Retrieve all Movie-Drama's Episodes
+GET | /episode/detail/:id | Retrieve the details of specific Movie-Drama's Episode
+POST | /episode/add | Add new Movie-Drama's Episode
+PUT | /episode/edit | Update Movie-Drama's Episode
+DELETE | /episode/delete/:id | Delete Movie-Drama's Episode
 
 
 #### ERD:
-![ERD](https://i.ibb.co/FqFjKBp/ER-LASTCHANGE-22022021.png)
+![ERD](https://i.ibb.co/9b220pL/ER-LASTLAST-24-02-2021.png)

@@ -57,6 +57,10 @@ public class MovieDrama {
 
 	@OneToMany(mappedBy = "movieDrama", cascade = CascadeType.ALL)
 	private Set<Episode> episodes;
+	
+	
+	@OneToMany(mappedBy="movieDrama", cascade = CascadeType.ALL)
+	 private Set<ImageGallery> imageGalleries;
 
 	public int getId() {
 		return id;
@@ -174,4 +178,13 @@ public class MovieDrama {
 		this.episodes = episodes;
 	}
 
+	public Set<ImageGallery> getImageGalleries() {
+		return imageGalleries;
+	}
+
+	public void setImageGalleries(Set<ImageGallery> imageGalleries) {
+		this.imageGalleries = imageGalleries;
+	}
+
+	
 }

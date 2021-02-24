@@ -10,9 +10,11 @@ import org.springframework.security.authentication.UsernamePasswordAuthenticatio
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.ga.favone.config.JwtUtil;
@@ -114,5 +116,11 @@ public class UserController {
 
 
 		return response;
+	}
+	
+	@GetMapping("/user/userProfile")
+	public User getUserProfile(@RequestParam String emailAddress) {
+		User user = dao.findByEmailAddress(emailAddress);
+		return user;
 	}
 }

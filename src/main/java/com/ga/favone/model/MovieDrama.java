@@ -9,6 +9,8 @@ import javax.persistence.*;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
+
+
 @Entity
 @Table(name = "MovieDrama")
 public class MovieDrama {
@@ -61,6 +63,10 @@ public class MovieDrama {
 	
 	@OneToMany(mappedBy="movieDrama", cascade = CascadeType.ALL)
 	 private Set<ImageGallery> imageGalleries;
+	
+	@ManyToOne
+	@JoinColumn(name = "FK_OwnerId")
+	private User user;
 
 	public int getId() {
 		return id;
@@ -184,6 +190,14 @@ public class MovieDrama {
 
 	public void setImageGalleries(Set<ImageGallery> imageGalleries) {
 		this.imageGalleries = imageGalleries;
+	}
+
+	public void setUser(User user) {
+		this.user = user;
+	}
+
+	public User getUser() {
+		return user;
 	}
 
 	

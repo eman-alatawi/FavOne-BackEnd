@@ -1,6 +1,7 @@
 package com.ga.favone.model;
 
 import java.time.LocalDateTime;
+import java.util.Set;
 
 import javax.persistence.*;
 
@@ -38,6 +39,10 @@ public class User {
 	@Column(name = "updatedAt", nullable = false, updatable = true)
 	@UpdateTimestamp
 	private LocalDateTime updateAt;
+	
+	
+	@OneToMany(mappedBy="user", cascade = CascadeType.ALL)
+	 private Set<MovieDrama> movieDramas;
 
 	public int getId() {
 		return id;
@@ -117,6 +122,14 @@ public class User {
 
 	public void setUserRole(String userRole) {
 		this.userRole = userRole;
+	}
+
+//	public Set<MovieDrama> getMovieDramas() {
+//		return movieDramas;
+//	}
+
+	public void setMovieDramas(Set<MovieDrama> movieDramas) {
+		this.movieDramas = movieDramas;
 	}
 	
 	

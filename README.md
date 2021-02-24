@@ -1,5 +1,7 @@
 # FavOne
-Your place of your favorite  Movie/Drama/Actor. The users can add their favorite movies, dramas, actors and share them with the world. (FavOne) is the shortcut of Favorite One. nice name right? :)
+Your place of your favorite  Movie/Drama/Episode/Actor. The users can add their favorite movies, dramas, episodes, and actors and share them with the world. (FavOne) is the shortcut of Favorite One, nice name right? :)
+
+
 
 ## Important Links
 
@@ -59,4 +61,4 @@ DELETE | /imagegallery/delete/:id | Delete Movie-Drama's Image Gallery
 
 
 #### ERD:
-![ERD](https://i.ibb.co/9b220pL/ER-LASTLAST-24-02-2021.png)
+![ERD](https://i.ibb.co/cg9rt6b/ER-WITH-USER.png)

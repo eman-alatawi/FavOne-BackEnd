@@ -51,6 +51,11 @@ GET | /episode/detail/:id | Retrieve the details of specific Movie-Drama's Episo
 POST | /episode/add | Add new Movie-Drama's Episode
 PUT | /episode/edit | Update Movie-Drama's Episode
 DELETE | /episode/delete/:id | Delete Movie-Drama's Episode
+GET | /imagegallery/index| Retrieve all Movie-Drama's Image Galleries
+GET | /imagegallery/detail/:id | Retrieve the details of specific Movie-Drama's Image Gallery
+POST | /imagegallery/add | Add new Movie-Drama's Image Gallery
+PUT | /imagegallery/edit | Update Movie-Drama's Image Gallery
+DELETE | /imagegallery/delete/:id | Delete Movie-Drama's Image Gallery
 
 
 #### ERD:

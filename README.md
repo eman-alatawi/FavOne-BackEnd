@@ -33,6 +33,9 @@ From Day-1 start choosing the idea and decide the name, design the ERD, Wirefram
 
 Verb         |	URI Pattern   |	Description
 ------------ | -------------  | ------------- 
+POST | /user/registration | User Register 
+POST | /user/authenticate | User Authentication
+PUT | /user/changePassword | Update User's Password
 GET | /actor/index | Retrieve all Actors
 GET | /actor/detail/:id | Retrieve the details of specific Actor
 POST | /actor/add | Add new Actor

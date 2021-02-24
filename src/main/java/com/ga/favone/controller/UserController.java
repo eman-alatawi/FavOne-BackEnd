@@ -11,6 +11,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -89,7 +90,7 @@ public class UserController {
 		return ResponseEntity.ok(new JwtResponse(jwtToken));
 	}
 	
-	@PostMapping("/user/changePassword")
+	@PutMapping("/user/changePassword")
 	public HashMap<String, String> changePassword(@RequestBody User user) {
 		
 		HashMap<String, String> response = new HashMap<String, String>();

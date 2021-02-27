@@ -57,11 +57,11 @@ public class MovieDrama {
 			@JoinColumn(name = "movieDrama_id") }, inverseJoinColumns = { @JoinColumn(name = "gender_id") })
 	private Set<Gender> genders;
 
-	@OneToMany(mappedBy = "movieDrama", cascade = CascadeType.ALL)
+	@OneToMany(mappedBy = "movieDrama", cascade = CascadeType.REMOVE)
 	private Set<Episode> episodes;
 	
 	
-	@OneToMany(mappedBy="movieDrama", cascade = CascadeType.ALL)
+	@OneToMany(mappedBy="movieDrama", cascade = CascadeType.REMOVE)
 	 private Set<ImageGallery> imageGalleries;
 	
 	@ManyToOne

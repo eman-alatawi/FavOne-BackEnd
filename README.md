@@ -1,5 +1,5 @@
-# FavOne
-Your place of your favorite  Movie/Drama/Episode/Actor. The users can add their favorite movies, dramas, episodes, and actors and share them with the world. (FavOne) is the shortcut of Favorite One, nice name right? :)
+# FaveOne
+Your place of your favorite  Movie/Drama/Episode/Actor. The users can add their favorite movies, dramas, episodes, and actors and share them with the world. (FaveOne) is the shortcut of Favorite One, nice name right? :)
 
 
 
@@ -11,7 +11,7 @@ Your place of your favorite  Movie/Drama/Episode/Actor. The users can add their 
 
 
 ## Planning Story
-From Day-1 start choosing the idea and decide the name, design the ERD, Wireframes and create the Apps, Repos. Continue by creating one Model/Controller in the back-end and check it with the Postman then go and design the related components in the front-end. For each 2 days there is a complete feature in the front-end with design and styles and the back-end functionality.
+From Day-1 start choosing the idea and decide the name, design the ERD, user stories, wireframes and create the Apps, Repos. Continue by creating one Model/Controller in the back-end and check it with the Postman then go and design the related components in the front-end. For each 2 days there is a complete feature in the front-end with design and styles and the back-end functionality.
 
 ### Technologies Used
 

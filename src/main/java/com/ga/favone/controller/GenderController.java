@@ -25,11 +25,6 @@ public class GenderController {
 		return it;
 	}
 	
-	@GetMapping("/mdgender/detail")
-	public Gender mdgenderDetails(@RequestParam int id) {
-		Gender mdgender = dao.findById(id);
-		return mdgender;
-	}
 	
 	@PostMapping("/mdgender/add")
 	public Gender addGender(@RequestBody Gender mdgender) {

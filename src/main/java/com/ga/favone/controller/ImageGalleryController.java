@@ -25,11 +25,6 @@ public class ImageGalleryController {
 		return it;
 	}
 	
-	@GetMapping("/imagegallery/detail")
-	public ImageGallery imagegalleryDetails(@RequestParam int id) {
-		ImageGallery imagegallery = dao.findById(id);
-		return imagegallery;
-	}
 	
 	@PostMapping("/imagegallery/add")
 	public ImageGallery addImageGallery(@RequestBody ImageGallery imagegallery) {

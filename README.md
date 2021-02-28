@@ -49,7 +49,6 @@ POST | /md/add | Add new Movie-Drama
 PUT | /md/edit | Update Movie-Drama
 DELETE | /md/delete/:id | Delete Movie-Drama
 GET | /mdgender/index | Retrieve all Movie-Drama's Genders
-GET | /mdgender/detail/:id | Retrieve the details of specific Movie-Drama's Gender
 POST | /mdgender/add | Add new Movie-Drama's Gender
 PUT | /mdgender/edit | Update Movie-Drama's Gender
 DELETE | /mdgender/delete/:id | Delete Movie-Drama's Gender
@@ -59,7 +58,6 @@ POST | /episode/add | Add new Movie-Drama's Episode
 PUT | /episode/edit | Update Movie-Drama's Episode
 DELETE | /episode/delete/:id | Delete Movie-Drama's Episode
 GET | /imagegallery/index| Retrieve all Movie-Drama's Image Galleries
-GET | /imagegallery/detail/:id | Retrieve the details of specific Movie-Drama's Image Gallery
 POST | /imagegallery/add | Add new Movie-Drama's Image Gallery
 PUT | /imagegallery/edit | Update Movie-Drama's Image Gallery
 DELETE | /imagegallery/delete/:id | Delete Movie-Drama's Image Gallery

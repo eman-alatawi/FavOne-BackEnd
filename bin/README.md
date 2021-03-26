@@ -5,7 +5,7 @@ Your place of your favorite  Movie/Drama/Episode/Actor. The users can add their 
 
 ## Important Links
 
-- [FaveOne Front-End Repo](https://github.com/eman-alatawi/FaveOne-FrontEnd)
+- [FaveOne Front-End Repo](https://git.generalassemb.ly/eman-e-alatawi/FaveOne-FrontEnd)
 - [Deployed FaveOne API](http://faveone-env.eba-3dzduni8.us-east-2.elasticbeanstalk.com/)
 - [Deployed FaveOne React App](https://pages.git.generalassemb.ly/eman-e-alatawi/FaveOne-FrontEnd/)
 
